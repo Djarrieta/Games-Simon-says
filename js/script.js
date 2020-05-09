@@ -7,7 +7,6 @@ var item=false
 var subNivel=-1
 var secuencia=false
 
-
 //console.log('Inicia y secuencia es igual a ' +secuencia)///////////////////////////////////
 
 function jugar(){

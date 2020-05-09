@@ -66,4 +66,9 @@ body{
     color: red;
     justify-items: center;
   }
+  header {
+    display: flex;
+    color: red;
+
+  }
   
