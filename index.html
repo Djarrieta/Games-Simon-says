@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+  <title>Juego Simon Dice</title>
+</head>
+<body>
+  <h1>SIMON DICE</h1>
+  <main class="container">
+    <div id="i0" class="item0 item" data-NumCaja="0" onclick="CLickItem0()"></div>
+    <div id="i1" class="item1 item" data-NumCaja="1" onclick="CLickItem1()"></div>
+    <div id="i2" class="item2 item" data-NumCaja="2" onclick="CLickItem2()"></div>
+    <div id="i3" class="item3 item" data-NumCaja="3" onclick="CLickItem3()"></div>
+  </main>
+  <div class="info">
+    <button id="btn" onclick="jugar()" class="btn">JUGAR</button>  
+    <h3 id="nivel">Nivel: 1</h3>
+    <span id="mensaje"></span>
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+</html>
