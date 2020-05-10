@@ -3,20 +3,26 @@ var i0=document.getElementById("i0")
 var i1=document.getElementById("i1")
 var i2=document.getElementById("i2")
 var i3=document.getElementById("i3")
+var btn=document.getElementById('btn')
+var imgLose=document.getElementById('img-lose')
+var contenedor=document.getElementById('container')
+
 var item=false
 var subNivel=-1
 var secuencia=false
 
-//console.log('Inicia y secuencia es igual a ' +secuencia)///////////////////////////////////
+imgLose.classList.add('hide')
+
+//console.log('Inicia y secuencia es igual a ' + secuencia)///////////////////////////////////
 
 function jugar(){
     //console.log('boton pulsar y secuencia es ' + secuencia)///////////////////////////////////
     this.document.getElementById("nivel").innerHTML='Nivel: 1'
-    this.document.getElementById("mensaje").innerHTML=''
     CalcularSecuencia()
     IluminarSecuencia()
-    btn.hidden=true
-    nivel.hidden=false
+    btn.classList.add('hide')
+    contenedor.classList.remove('hide')
+    imgLose.classList.add('hide')
 }
 function VerificarItem(){
     if(this.secuencia){
@@ -36,9 +42,9 @@ function VerificarItem(){
             }
         }else{
             //console.log('perdiste no coincidio ' + this.item + ' con secuencia de subnivel' + this.secuencia[this.subNivel])//////////////////////////////////
-            this.document.getElementById("mensaje").innerHTML='PERDISTE!!'
-            this.btn.hidden=false
-            this.nivel.hidden=false
+            btn.classList.remove('hide')
+            imgLose.classList.remove('hide')
+            contenedor.classList.add('hide')
             this.item=false
             this.subNivel=-1
             this.secuencia=false
@@ -75,6 +81,7 @@ function CalcularSecuencia(){
 
 async function IluminarSecuencia(){
     let tiempo=0
+
     await  secuencia.forEach(x=>{
         switch(x){
             case 0: 
@@ -110,3 +117,4 @@ async function IluminarSecuencia(){
 
     //console.log('se ilumina la secuencia sin problemas')/////////////////////////////////
 }
+

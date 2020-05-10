@@ -1,27 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./css/style.css">
-  <title>Juego Simon Dice</title>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <title>Juegos Dja.Red</title>
 </head>
-<body>
-  <header> <a href='http://www.dja.red/'>Dja.Red</a></header>
-  <h1>SIMON DICE</h1>
-  <main class="container">
-    <div id="i0" class="item0 item" data-NumCaja="0" onclick="CLickItem0()"></div>
-    <div id="i1" class="item1 item" data-NumCaja="1" onclick="CLickItem1()"></div>
-    <div id="i2" class="item2 item" data-NumCaja="2" onclick="CLickItem2()"></div>
-    <div id="i3" class="item3 item" data-NumCaja="3" onclick="CLickItem3()"></div>
+<body>   
+  <nav class="header">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo center">SIMON DICE</a>
+      <ul class="left hide-on-med-and-down">
+        <header> <a href='http://www.dja.red/'>Visita Dja.Red</a></header>
+      </ul>
+    </div>
+  </nav>
+  <main class="containerSeccion black">
+    <div id='container' class="containerGrid">
+      <div id="i0" class="item0 item" data-NumCaja="0" onclick="CLickItem0()"></div>
+      <div id="i1" class="item1 item" data-NumCaja="1" onclick="CLickItem1()"></div>
+      <div id="i2" class="item2 item" data-NumCaja="2" onclick="CLickItem2()"></div>
+      <div id="i3" class="item3 item" data-NumCaja="3" onclick="CLickItem3()"></div>
+    </div>
+    <img id= 'img-lose' src="./img/GameOver.jpg" alt="">
+    <button id='btn' onclick="jugar()" class="btn waves-effect waves-light white" type="submit" name="action">Jugar
+      <i class="material-icons right accent-4">sentiment_very_satisfied</i>
+    </button>
+    <h3 class="nivel" id="nivel">Nivel: 1</h3>
   </main>
-  <div class="info">
-    <button id="btn" onclick="jugar()" class="btn">JUGAR</button>  
-    <h3 id="nivel">Nivel: 1</h3>
-    <span id="mensaje"></span>
-  </div>
-  <script src="./js/script.js"></script>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Acerca de este juego</h5>
+          <p class="grey-text text-lighten-4">Este es un proyecto personal de Darío Arrieta. Visita mi página para más contenido como éste.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Contacto</h5>
+          <ul>
+            <li>+57 300 871 82 17</li>
+            <li><a class="grey-text text-lighten-3" href="http://www.dja.red/">Página personal Dja.Red</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/Djarrieta/">GitHub</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://bio.torre.co/es/dariojosearrieta">Bio de Torre.co</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/dario-jose-arrieta-deavila-ba49307b/">LinkedIn</a></li>
+           </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © Dja.Red Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+  <script src="./js/script.js"></script>  
 </body>
 </html>
